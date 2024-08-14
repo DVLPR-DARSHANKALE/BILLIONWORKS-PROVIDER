@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/consts/colorpallate.dart';
 import 'package:provider/consts/packages.dart';
-import 'package:provider/views/booking_on_tap.dart';
+import 'package:provider/views/bookings_screen/booking_on_tap.dart';
 
 class ReviewserviceScreen extends StatelessWidget {
   const ReviewserviceScreen({super.key});
@@ -13,7 +13,7 @@ class ReviewserviceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColor.mainColor,
+        backgroundColor: AppColors.primaryColor,
         leading: IconButton(
           onPressed: () {
             GoRouter.of(context).pop(BookingOnTap());
@@ -27,9 +27,7 @@ class ReviewserviceScreen extends StatelessWidget {
         title: Text(
           "Review On Services",
           style: TextStyle(
-              color: Colors.white,
-              fontFamily: typo.WorkSansMedium,
-              fontSize: 18.sp),
+              color: Colors.white, fontFamily: Typo.medium, fontSize: 18.sp),
         ),
       ),
       body: Container(
@@ -43,7 +41,7 @@ class ReviewserviceScreen extends StatelessWidget {
                     "Customer Review By Service Name",
                     style: TextStyle(
                         color: Colors.black,
-                        fontFamily: typo.WorkSansMedium,
+                        fontFamily: Typo.medium,
                         fontSize: 18.sp),
                   ),
                 ],
@@ -81,7 +79,7 @@ class ReviewserviceScreen extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 40.r,
-                    backgroundImage: AssetImage(Asseturl.igserviceimg1),
+                    backgroundImage: AssetImage(AssetUrl.igserviceimg1),
                   ),
                   SizedBox(
                     width: 16.w,
@@ -92,14 +90,14 @@ class ReviewserviceScreen extends StatelessWidget {
                         "Donna Bins",
                         style: TextStyle(
                             color: Colors.black,
-                            fontFamily: typo.WorkSansMedium,
+                            fontFamily: Typo.medium,
                             fontSize: 18.sp),
                       ),
                       Text(
                         "@DONNABINS",
                         style: TextStyle(
-                            color: AppColor.GreyTExtColor,
-                            fontFamily: typo.WorkSansMedium,
+                            color: AppColors.GreyTExtColor,
+                            fontFamily: Typo.medium,
                             fontSize: 14.sp),
                       ),
                     ],
@@ -108,7 +106,7 @@ class ReviewserviceScreen extends StatelessWidget {
               ),
               Icon(
                 Icons.delete_outline_outlined,
-                color: AppColor.mainColor,
+                color: AppColors.primaryColor,
               ),
             ],
           ),
@@ -128,14 +126,14 @@ class ReviewserviceScreen extends StatelessWidget {
                   "Service Name : Painting",
                   style: TextStyle(
                       color: Colors.black,
-                      fontFamily: typo.WorkSansMedium,
+                      fontFamily: Typo.medium,
                       fontSize: 14.sp),
                 ),
                 SizedBox(
                   height: 10.h,
                 ),
                 Divider(
-                  color: AppColor.DividarColor,
+                  color: AppColors.DividarColor,
                 ),
                 SizedBox(
                   height: 10.h,
@@ -152,8 +150,8 @@ class ReviewserviceScreen extends StatelessWidget {
                     Text(
                       "4.5",
                       style: TextStyle(
-                          color: AppColor.GreyTExtColor,
-                          fontFamily: typo.WorkSansMedium,
+                          color: AppColors.GreyTExtColor,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                     SizedBox(
@@ -162,8 +160,8 @@ class ReviewserviceScreen extends StatelessWidget {
                     Text(
                       "25 Jan",
                       style: TextStyle(
-                          color: AppColor.GreyTExtColor,
-                          fontFamily: typo.WorkSansMedium,
+                          color: AppColors.GreyTExtColor,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     )
                   ],
@@ -174,8 +172,8 @@ class ReviewserviceScreen extends StatelessWidget {
                 Text(
                   "Amet minim mollit non deserunt \nullamco est sit aliqua dolor do amet. ",
                   style: TextStyle(
-                      color: AppColor.GreyTExtColor,
-                      fontFamily: typo.WorkSansMedium,
+                      color: AppColors.GreyTExtColor,
+                      fontFamily: Typo.medium,
                       fontSize: 14.sp),
                 ),
               ],

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/views/reviewservice_screen.dart';
-import 'package:provider/views/service_list.dart';
+import 'package:provider/views/bookings_screen/reviewservice_screen.dart';
+import 'package:provider/views/home_screen/service_list.dart';
 
-import '../consts/packages.dart';
+import '../../consts/packages.dart';
 
 class BookingOnTap extends StatelessWidget {
   const BookingOnTap({super.key});
@@ -27,14 +27,14 @@ class BookingOnTap extends StatelessWidget {
                   "Booking History",
                   style: TextStyle(
                       color: Colors.black,
-                      fontFamily: typo.WorkSansMedium,
+                      fontFamily: Typo.medium,
                       fontSize: 16.sp),
                 ),
                 Text(
                   "ID : #123",
                   style: TextStyle(
-                      color: AppColor.mainColor,
-                      fontFamily: typo.WorkSansSemiBold,
+                      color: AppColors.primaryColor,
+                      fontFamily: Typo.semiBold,
                       fontSize: 16.sp),
                 )
               ],
@@ -51,15 +51,15 @@ class BookingOnTap extends StatelessWidget {
                     Text(
                       "1:17 PM",
                       style: TextStyle(
-                          color: AppColor.textColor,
-                          fontFamily: typo.WorkSansSemiBold,
+                          color: AppColors.textColor,
+                          fontFamily: Typo.semiBold,
                           fontSize: 16.sp),
                     ),
                     Text(
                       "6 Feb",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansSemiBold,
+                          fontFamily: Typo.semiBold,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -99,14 +99,14 @@ class BookingOnTap extends StatelessWidget {
                       "New Booking",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansSemiBold,
+                          fontFamily: Typo.semiBold,
                           fontSize: 16.sp),
                     ),
                     Text(
                       "New Booking Added by \ncustomer",
                       style: TextStyle(
-                          color: AppColor.textColor,
-                          fontFamily: typo.WorkSansSemiBold,
+                          color: AppColors.textColor,
+                          fontFamily: Typo.semiBold,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -124,15 +124,15 @@ class BookingOnTap extends StatelessWidget {
                     Text(
                       "1:21 PM",
                       style: TextStyle(
-                          color: AppColor.textColor,
-                          fontFamily: typo.WorkSansSemiBold,
+                          color: AppColors.textColor,
+                          fontFamily: Typo.semiBold,
                           fontSize: 16.sp),
                     ),
                     Text(
                       "6 Feb",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansSemiBold,
+                          fontFamily: Typo.semiBold,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -173,14 +173,14 @@ class BookingOnTap extends StatelessWidget {
                       "Accept Booking",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansSemiBold,
+                          fontFamily: Typo.semiBold,
                           fontSize: 16.sp),
                     ),
                     Text(
                       "Status changed \nFrom pending to accept ",
                       style: TextStyle(
-                          color: AppColor.textColor,
-                          fontFamily: typo.WorkSansSemiBold,
+                          color: AppColors.textColor,
+                          fontFamily: Typo.semiBold,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -198,15 +198,15 @@ class BookingOnTap extends StatelessWidget {
                     Text(
                       "1:22 PM",
                       style: TextStyle(
-                          color: AppColor.textColor,
-                          fontFamily: typo.WorkSansSemiBold,
+                          color: AppColors.textColor,
+                          fontFamily: Typo.semiBold,
                           fontSize: 16.sp),
                     ),
                     Text(
                       "6 Feb",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansSemiBold,
+                          fontFamily: Typo.semiBold,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -235,14 +235,14 @@ class BookingOnTap extends StatelessWidget {
                       "Assigned Booking",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansSemiBold,
+                          fontFamily: Typo.semiBold,
                           fontSize: 16.sp),
                     ),
                     Text(
                       "Booking has assigned \nto Naomie Hackett",
                       style: TextStyle(
-                          color: AppColor.textColor,
-                          fontFamily: typo.WorkSansSemiBold,
+                          color: AppColors.textColor,
+                          fontFamily: Typo.semiBold,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -269,9 +269,7 @@ class BookingOnTap extends StatelessWidget {
         title: Text(
           "Pending",
           style: TextStyle(
-              color: Colors.white,
-              fontFamily: typo.WorkSansMedium,
-              fontSize: 16.sp),
+              color: Colors.white, fontFamily: Typo.medium, fontSize: 16.sp),
         ),
         actions: [
           GestureDetector(
@@ -282,7 +280,7 @@ class BookingOnTap extends StatelessWidget {
               "Check Status",
               style: TextStyle(
                   color: Colors.white,
-                  fontFamily: typo.WorkSansMedium,
+                  fontFamily: Typo.medium,
                   fontSize: 14.sp),
             ),
           ),
@@ -290,7 +288,7 @@ class BookingOnTap extends StatelessWidget {
             width: 20.w,
           ),
         ],
-        backgroundColor: AppColor.mainColor,
+        backgroundColor: AppColors.primaryColor,
       ),
       body: Container(
         padding: EdgeInsets.all(25),
@@ -304,14 +302,14 @@ class BookingOnTap extends StatelessWidget {
                     "Booking ID",
                     style: TextStyle(
                         color: Color(0xff6C757D),
-                        fontFamily: typo.WorkSansMedium,
+                        fontFamily: Typo.medium,
                         fontSize: 16.sp),
                   ),
                   Text(
                     "#123",
                     style: TextStyle(
-                        color: AppColor.mainColor,
-                        fontFamily: typo.WorkSansSemiBold,
+                        color: AppColors.primaryColor,
+                        fontFamily: Typo.semiBold,
                         fontSize: 18.sp),
                   ),
                 ],
@@ -335,7 +333,7 @@ class BookingOnTap extends StatelessWidget {
                         "Apartment Cleanings",
                         style: TextStyle(
                             color: Colors.black,
-                            fontFamily: typo.WorkSansMedium,
+                            fontFamily: Typo.medium,
                             fontSize: 18.sp),
                       ),
                       Row(
@@ -344,14 +342,14 @@ class BookingOnTap extends StatelessWidget {
                             "Date :",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                           Text(
                             " 26 Jan, 2022",
                             style: TextStyle(
-                                color: AppColor.textColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.textColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                         ],
@@ -362,14 +360,14 @@ class BookingOnTap extends StatelessWidget {
                             "Time :",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                           Text(
                             " 04:00 PM",
                             style: TextStyle(
-                                color: AppColor.textColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.textColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                         ],
@@ -377,14 +375,14 @@ class BookingOnTap extends StatelessWidget {
                       Container(
                         width: 43.w,
                         height: 16.h,
-                        child: SvgPicture.asset(Asseturl.igimg1),
+                        child: SvgPicture.asset(AssetUrl.igimg1),
                       ),
                       SizedBox(height: 40.h),
                       Text(
                         "About Handyman",
                         style: TextStyle(
                             color: Colors.black,
-                            fontFamily: typo.WorkSansMedium,
+                            fontFamily: Typo.medium,
                             fontSize: 16.sp),
                       ),
                     ],
@@ -408,7 +406,7 @@ class BookingOnTap extends StatelessWidget {
                       children: [
                         CircleAvatar(
                           radius: 55.r,
-                          backgroundImage: AssetImage(Asseturl.igbackgroundimg),
+                          backgroundImage: AssetImage(AssetUrl.igbackgroundimg),
                         ),
                         SizedBox(
                           width: 18.w,
@@ -419,7 +417,7 @@ class BookingOnTap extends StatelessWidget {
                               "Justine Boyle",
                               style: TextStyle(
                                   color: Colors.black,
-                                  fontFamily: typo.WorkSansMedium,
+                                  fontFamily: Typo.medium,
                                   fontSize: 18.sp),
                             ),
                             SizedBox(
@@ -429,7 +427,7 @@ class BookingOnTap extends StatelessWidget {
                               "Cleaning Expert",
                               style: TextStyle(
                                   color: Color(0xff6C757D),
-                                  fontFamily: typo.WorkSansMedium,
+                                  fontFamily: Typo.medium,
                                   fontSize: 14.sp),
                             ),
                             SizedBox(
@@ -448,7 +446,7 @@ class BookingOnTap extends StatelessWidget {
                                   "4.5",
                                   style: TextStyle(
                                       color: Color(0xff6C757D),
-                                      fontFamily: typo.WorkSansMedium,
+                                      fontFamily: Typo.medium,
                                       fontSize: 14.sp),
                                 ),
                               ],
@@ -473,7 +471,7 @@ class BookingOnTap extends StatelessWidget {
                           child: Row(
                             children: [
                               Image.asset(
-                                Asseturl.igcallingicon2,
+                                AssetUrl.igcallingicon2,
                                 scale: 4,
                                 color: Colors.white,
                               ),
@@ -482,7 +480,7 @@ class BookingOnTap extends StatelessWidget {
                               ),
                               Text("Call",
                                   style: TextStyle(
-                                      fontFamily: typo.WorkSansMedium,
+                                      fontFamily: Typo.medium,
                                       fontSize: 14.sp)),
                             ],
                           ),
@@ -503,7 +501,7 @@ class BookingOnTap extends StatelessWidget {
                           child: Row(
                             children: [
                               Image.asset(
-                                Asseturl.igchaticon,
+                                AssetUrl.igchaticon,
                                 color: Colors.black,
                                 scale: 4.5,
                               ),
@@ -514,7 +512,7 @@ class BookingOnTap extends StatelessWidget {
                                 "Chat",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontFamily: typo.WorkSansMedium,
+                                    fontFamily: Typo.medium,
                                     fontSize: 14.sp),
                               ),
                             ],
@@ -529,7 +527,7 @@ class BookingOnTap extends StatelessWidget {
                       "Rate Handyman",
                       style: TextStyle(
                           color: Color(0xff5F60B9),
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     )
                   ],
@@ -545,7 +543,7 @@ class BookingOnTap extends StatelessWidget {
                     "About Customer",
                     style: TextStyle(
                         color: Colors.black,
-                        fontFamily: typo.WorkSansMedium,
+                        fontFamily: Typo.medium,
                         fontSize: 16.sp),
                   ),
                 ],
@@ -568,7 +566,7 @@ class BookingOnTap extends StatelessWidget {
                         CircleAvatar(
                           radius: 55.r,
                           backgroundImage:
-                              AssetImage(Asseturl.igbackgroundimg1),
+                              AssetImage(AssetUrl.igbackgroundimg1),
                         ),
                         SizedBox(
                           width: 18.w,
@@ -580,7 +578,7 @@ class BookingOnTap extends StatelessWidget {
                               "Leslie Alexander",
                               style: TextStyle(
                                   color: Colors.black,
-                                  fontFamily: typo.WorkSansMedium,
+                                  fontFamily: Typo.medium,
                                   fontSize: 18.sp),
                             ),
                             SizedBox(
@@ -599,7 +597,7 @@ class BookingOnTap extends StatelessWidget {
                                   "Cleaning Expert",
                                   style: TextStyle(
                                       color: Color(0xff6C757D),
-                                      fontFamily: typo.WorkSansMedium,
+                                      fontFamily: Typo.medium,
                                       fontSize: 14.sp),
                                 ),
                               ],
@@ -621,7 +619,7 @@ class BookingOnTap extends StatelessWidget {
                                   "1901 Thornridge Cirav...",
                                   style: TextStyle(
                                       color: Color(0xff6C757D),
-                                      fontFamily: typo.WorkSansMedium,
+                                      fontFamily: Typo.medium,
                                       fontSize: 14.sp),
                                 ),
                               ],
@@ -646,7 +644,7 @@ class BookingOnTap extends StatelessWidget {
                           child: Row(
                             children: [
                               Image.asset(
-                                Asseturl.igcallingicon2,
+                                AssetUrl.igcallingicon2,
                                 scale: 4,
                                 color: Colors.white,
                               ),
@@ -655,7 +653,7 @@ class BookingOnTap extends StatelessWidget {
                               ),
                               Text("Call",
                                   style: TextStyle(
-                                      fontFamily: typo.WorkSansMedium,
+                                      fontFamily: Typo.medium,
                                       fontSize: 14.sp)),
                             ],
                           ),
@@ -676,7 +674,7 @@ class BookingOnTap extends StatelessWidget {
                           child: Row(
                             children: [
                               Image.asset(
-                                Asseturl.igchaticon,
+                                AssetUrl.igchaticon,
                                 color: Colors.black,
                                 scale: 4.5,
                               ),
@@ -687,7 +685,7 @@ class BookingOnTap extends StatelessWidget {
                                 "Chat",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontFamily: typo.WorkSansMedium,
+                                    fontFamily: Typo.medium,
                                     fontSize: 14.sp),
                               ),
                             ],
@@ -718,8 +716,7 @@ class BookingOnTap extends StatelessWidget {
                       ),
                       Text("Cancel Booking",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium,
-                              fontSize: 14.sp)),
+                              fontFamily: Typo.medium, fontSize: 14.sp)),
                     ],
                   ),
                 ),
@@ -732,8 +729,7 @@ class BookingOnTap extends StatelessWidget {
                 children: [
                   Text(
                     "Payment Details",
-                    style: TextStyle(
-                        fontFamily: typo.WorkSansMedium, fontSize: 16.sp),
+                    style: TextStyle(fontFamily: Typo.medium, fontSize: 16.sp),
                   ),
                 ],
               ),
@@ -755,13 +751,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "ID",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           "#123",
                           style: TextStyle(
-                              color: AppColor.mainColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.primaryColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -773,13 +769,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Method",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           "Cash",
                           style: TextStyle(
-                              color: AppColor.textColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.textColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -791,13 +787,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Status",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           "Pending",
                           style: TextStyle(
                               color: Colors.green,
-                              fontFamily: typo.WorkSansMedium,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -809,13 +805,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Subtotal",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           "\$459",
                           style: TextStyle(
-                              color: AppColor.textColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.textColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -828,8 +824,7 @@ class BookingOnTap extends StatelessWidget {
                 children: [
                   Text(
                     "Price Detail",
-                    style: TextStyle(
-                        fontFamily: typo.WorkSansMedium, fontSize: 16.sp),
+                    style: TextStyle(fontFamily: Typo.medium, fontSize: 16.sp),
                   ),
                 ],
               ),
@@ -851,13 +846,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Rate",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           "\$45.00",
                           style: TextStyle(
-                              color: AppColor.mainColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.primaryColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -869,13 +864,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Quantity",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           "*2",
                           style: TextStyle(
-                              color: AppColor.textColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.textColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -886,13 +881,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Discount",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           " (5% off)",
                           style: TextStyle(
                               color: Colors.green,
-                              fontFamily: typo.WorkSansMedium,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                         SizedBox(
@@ -902,7 +897,7 @@ class BookingOnTap extends StatelessWidget {
                           "- \$23.66",
                           style: TextStyle(
                               color: Colors.green,
-                              fontFamily: typo.WorkSansMedium,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -913,13 +908,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Coupon",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           "(AB45789A)",
                           style: TextStyle(
-                              color: AppColor.mainColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.primaryColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                         SizedBox(
@@ -929,7 +924,7 @@ class BookingOnTap extends StatelessWidget {
                           "\$459",
                           style: TextStyle(
                               color: Colors.green,
-                              fontFamily: typo.WorkSansMedium,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -941,13 +936,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Subtotal",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansMedium, fontSize: 14.sp),
+                              fontFamily: Typo.medium, fontSize: 14.sp),
                         ),
                         Text(
                           "\$459",
                           style: TextStyle(
-                              color: AppColor.textColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.textColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -962,14 +957,13 @@ class BookingOnTap extends StatelessWidget {
                         Text(
                           "Total Amount",
                           style: TextStyle(
-                              fontFamily: typo.WorkSansSemiBold,
-                              fontSize: 14.sp),
+                              fontFamily: Typo.semiBold, fontSize: 14.sp),
                         ),
                         Text(
                           "\$1255",
                           style: TextStyle(
-                              color: AppColor.mainColor,
-                              fontFamily: typo.WorkSansSemiBold,
+                              color: AppColors.primaryColor,
+                              fontFamily: Typo.semiBold,
                               fontSize: 14.sp),
                         ),
                       ],
@@ -985,8 +979,7 @@ class BookingOnTap extends StatelessWidget {
                 children: [
                   Text(
                     "Reviews",
-                    style: TextStyle(
-                        fontFamily: typo.WorkSansMedium, fontSize: 16.sp),
+                    style: TextStyle(fontFamily: Typo.medium, fontSize: 16.sp),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -995,8 +988,8 @@ class BookingOnTap extends StatelessWidget {
                     child: Text(
                       "View All",
                       style: TextStyle(
-                          color: AppColor.textColor,
-                          fontFamily: typo.WorkSansMedium,
+                          color: AppColors.textColor,
+                          fontFamily: Typo.medium,
                           fontSize: 12.sp),
                     ),
                   ),
@@ -1009,7 +1002,7 @@ class BookingOnTap extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CircleAvatar(
-                    backgroundImage: AssetImage(Asseturl.igbackgroundimg3),
+                    backgroundImage: AssetImage(AssetUrl.igbackgroundimg3),
                     radius: 25,
                   ),
                   SizedBox(
@@ -1024,7 +1017,7 @@ class BookingOnTap extends StatelessWidget {
                             "Donna Bins",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                           SizedBox(
@@ -1033,8 +1026,8 @@ class BookingOnTap extends StatelessWidget {
                           Text(
                             "02 Dec",
                             style: TextStyle(
-                                color: AppColor.textColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.textColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                         ],
@@ -1054,8 +1047,8 @@ class BookingOnTap extends StatelessWidget {
                           Text(
                             "4.5",
                             style: TextStyle(
-                                color: AppColor.textColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.textColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                         ],
@@ -1066,8 +1059,8 @@ class BookingOnTap extends StatelessWidget {
                       Text(
                         "Amal is incredible at what he does,\nvery prompt with delivery and any \nrevisions.",
                         style: TextStyle(
-                            color: AppColor.textColor,
-                            fontFamily: typo.WorkSansMedium,
+                            color: AppColors.textColor,
+                            fontFamily: Typo.medium,
                             fontSize: 14.sp),
                       )
                     ],
@@ -1081,7 +1074,7 @@ class BookingOnTap extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CircleAvatar(
-                    backgroundImage: AssetImage(Asseturl.igbackgroundimg3),
+                    backgroundImage: AssetImage(AssetUrl.igbackgroundimg3),
                     radius: 25,
                   ),
                   SizedBox(
@@ -1096,7 +1089,7 @@ class BookingOnTap extends StatelessWidget {
                             "Saul Armstrong",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                           SizedBox(
@@ -1105,8 +1098,8 @@ class BookingOnTap extends StatelessWidget {
                           Text(
                             "25 Jan",
                             style: TextStyle(
-                                color: AppColor.textColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.textColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                         ],
@@ -1126,8 +1119,8 @@ class BookingOnTap extends StatelessWidget {
                           Text(
                             "4.5",
                             style: TextStyle(
-                                color: AppColor.textColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.textColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                         ],
@@ -1138,8 +1131,8 @@ class BookingOnTap extends StatelessWidget {
                       Text(
                         "Amal is incredible at what he does,\nvery prompt with delivery and any \nrevisions.",
                         style: TextStyle(
-                            color: AppColor.textColor,
-                            fontFamily: typo.WorkSansMedium,
+                            color: AppColors.textColor,
+                            fontFamily: Typo.medium,
                             fontSize: 14.sp),
                       )
                     ],

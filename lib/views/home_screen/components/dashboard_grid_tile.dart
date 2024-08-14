@@ -2,12 +2,15 @@ import 'package:provider/consts/packages.dart';
 
 Container DashboarGrid({value, text, icon}) {
   return Container(
+    padding: EdgeInsets.symmetric(
+      horizontal: 16,
+    ),
     alignment: Alignment.center,
     decoration: BoxDecoration(
       border: Border.all(color: Color(0xffEBEBEB)),
     ),
     child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Column(
@@ -17,21 +20,18 @@ Container DashboarGrid({value, text, icon}) {
             Text(
               value,
               style: TextStyle(
-                  color: AppColor.mainColor,
-                  fontFamily: typo.WorkSansSemiBold,
+                  color: AppColors.primaryColor,
+                  fontFamily: Typo.semiBold,
                   fontSize: 22.sp),
             ),
             Text(
               text,
               style: TextStyle(
-                  color: AppColor.GreyTExtColor,
-                  fontFamily: typo.WorkSansMedium,
+                  color: AppColors.GreyTExtColor,
+                  fontFamily: Typo.medium,
                   fontSize: 12.sp),
             ),
           ],
-        ),
-        SizedBox(
-          width: 12.w,
         ),
         CircleAvatar(
           backgroundColor: Color(
@@ -39,7 +39,7 @@ Container DashboarGrid({value, text, icon}) {
           ),
           child: Image.asset(
             icon,
-            color: AppColor.mainColor,
+            color: AppColors.primaryColor,
             scale: 3,
           ),
         )

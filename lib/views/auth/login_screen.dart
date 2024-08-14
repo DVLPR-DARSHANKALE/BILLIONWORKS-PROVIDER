@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/consts/AssetUrl.dart';
 import 'package:provider/consts/TypoGraphay.dart';
 import 'package:provider/consts/colorpallate.dart';
-import 'package:provider/views/SingUp_screen.dart';
-import 'package:provider/views/booking_list.dart';
-import 'package:provider/views/home_screen/home_screen.dart';
+import 'package:provider/consts/margins_spacings.dart';
+import 'package:provider/views/auth/SingUp_screen.dart';
+import 'package:provider/views/bookings_screen/booking_list.dart';
+import 'package:provider/views/home/home.dart';
+import 'package:provider/views/shared_widgets/custom_textfield.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(20),
+        padding: Spacing.screenPadding,
         width: double.infinity,
         child: SingleChildScrollView(
           child: Column(
@@ -37,84 +37,53 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Text(
                 "Hello John!",
-                style:
-                    TextStyle(fontFamily: typo.WorkSansMedium, fontSize: 22.sp),
+                style: TextStyle(fontFamily: Typo.medium, fontSize: 22.sp),
               ),
               Text(
                 textAlign: TextAlign.center,
                 "Welcome Back, you have been\nmissed for long Time",
-                style: TextStyle(color: AppColor.GreyTExtColor),
+                style: TextStyle(color: AppColors.GreyTExtColor),
               ),
               SizedBox(
                 height: 85.h,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  suffixIcon: Image.asset(
-                    Asseturl.igmassageicon,
-                    scale: 3,
-                  ),
-                  filled: true,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none),
-                  fillColor: Color(0xffF6F7F9),
-                  hintText: "Email Address",
-                  hintStyle: TextStyle(
-                      color: AppColor.textColor,
-                      fontFamily: typo.WorkSansMedium,
-                      fontSize: 14),
-                ),
-              ),
+              customTextField(
+                  icon: AssetUrl.igmassageicon, hint: "Enter your email"),
               SizedBox(
                 height: 24.h,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  suffixIcon: Image.asset(
-                    Asseturl.ighide,
-                    scale: 3,
-                  ),
-                  filled: true,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none),
-                  fillColor: Color(0xffF6F7F9),
-                  hintText: "Password",
-                  hintStyle: TextStyle(
-                      color: AppColor.textColor,
-                      fontFamily: typo.WorkSansMedium,
-                      fontSize: 14),
-                ),
-              ),
+              customTextField(
+                  icon: AssetUrl.ighide, hint: "Password", isPass: true),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Checkbox(
-                    activeColor: AppColor.mainColor,
-                    value: is_check,
-                    onChanged: (value) {
-                      is_check = value!;
+                  Row(
+                    children: [
+                      Checkbox(
+                        activeColor: AppColors.primaryColor,
+                        value: is_check,
+                        onChanged: (value) {
+                          is_check = value!;
 
-                      setState(() {});
-                    },
-                  ),
-                  Text(
-                    "Remember Me",
-                    style: TextStyle(
-                        color: AppColor.GreyTExtColor,
-                        fontFamily: typo.WorkSansMedium,
-                        fontSize: 12.sp),
-                  ),
-                  SizedBox(
-                    width: 63.w,
+                          setState(() {});
+                        },
+                      ),
+                      Text(
+                        "Remember Me",
+                        style: TextStyle(
+                            color: AppColors.GreyTExtColor,
+                            fontFamily: Typo.medium,
+                            fontSize: 12.sp),
+                      ),
+                    ],
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
                       "Forgot Password?",
                       style: TextStyle(
-                          color: AppColor.mainColor,
-                          fontFamily: typo.WorkSansSemiBoldItalic,
+                          color: AppColors.primaryColor,
+                          fontFamily: Typo.semiBoldItalic,
                           fontSize: 12.sp),
                     ),
                   )
@@ -127,13 +96,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 45.h,
                 width: double.infinity,
                 child: FilledButton(
-                  style: FilledButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
                   onPressed: () {
-                    GoRouter.of(context).goNamed(BookingList.id);
+                    GoRouter.of(context).goNamed(Home.id);
                   },
                   child: Container(child: Text("Login")),
                 ),
@@ -144,8 +108,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     "Don’t have an account?",
                     style: TextStyle(
-                        color: AppColor.GreyTExtColor,
-                        fontFamily: typo.WorkSansMedium,
+                        color: AppColors.GreyTExtColor,
+                        fontFamily: Typo.medium,
                         fontSize: 14.sp),
                   ),
                   TextButton(
@@ -156,8 +120,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       "Sign Up",
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: AppColor.mainColor,
-                          fontFamily: typo.WorkSansSemiBoldItalic),
+                          color: AppColors.primaryColor,
+                          fontFamily: Typo.semiBoldItalic),
                     ),
                   ),
                 ],
@@ -168,17 +132,17 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 children: [
                   Expanded(
-                    child: Divider(color: AppColor.DividarColor),
+                    child: Divider(color: AppColors.DividarColor),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
                       "Or Continue With",
-                      style: TextStyle(color: AppColor.GreyTExtColor),
+                      style: TextStyle(color: AppColors.GreyTExtColor),
                     ),
                   ),
                   Expanded(
-                    child: Divider(color: AppColor.DividarColor),
+                    child: Divider(color: AppColors.DividarColor),
                   ),
                 ],
               ),
@@ -189,16 +153,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    Asseturl.igGoogleLogo,
+                    AssetUrl.igGoogleLogo,
                     scale: 3,
                   ),
                   SizedBox(
                     width: 20.w,
                   ),
                   Image.asset(
-                    Asseturl.igcallingicon2,
+                    AssetUrl.igcallingicon2,
                     scale: 2.3,
-                    color: AppColor.mainColor,
+                    color: AppColors.primaryColor,
                   ),
                 ],
               )

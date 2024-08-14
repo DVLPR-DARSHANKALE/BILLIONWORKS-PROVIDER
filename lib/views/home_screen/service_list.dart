@@ -6,7 +6,7 @@ import 'package:provider/consts/colorpallate.dart';
 import 'package:provider/views/shared_widgets/services_grid_tile.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import '../consts/packages.dart';
+import '../../consts/packages.dart';
 
 class ServiceList extends StatefulWidget {
   const ServiceList({super.key});
@@ -28,11 +28,9 @@ class _ServiceListState extends State<ServiceList> {
         title: Text(
           "Service List",
           style: TextStyle(
-              color: Colors.white,
-              fontFamily: typo.WorkSansMedium,
-              fontSize: 18.sp),
+              color: Colors.white, fontFamily: Typo.medium, fontSize: 18.sp),
         ),
-        backgroundColor: AppColor.mainColor,
+        backgroundColor: AppColors.primaryColor,
         actions: [
           IconButton(
             onPressed: () {
@@ -40,7 +38,7 @@ class _ServiceListState extends State<ServiceList> {
               setState(() {});
             },
             icon: SvgPicture.asset(
-                gridView ? Asseturl.igflitter : Asseturl.igCategory),
+                gridView ? AssetUrl.igflitter : AssetUrl.igCategory),
           ),
         ],
       ),
@@ -110,7 +108,7 @@ class _ServiceListState extends State<ServiceList> {
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      Asseturl.igCarpenterPhoto,
+                      AssetUrl.igCarpenterPhoto,
                     ),
                   ),
                 ),
@@ -123,13 +121,13 @@ class _ServiceListState extends State<ServiceList> {
                   height: 26.h,
                   width: 48.w,
                   decoration: BoxDecoration(
-                      color: AppColor.mainColor,
+                      color: AppColors.primaryColor,
                       borderRadius: BorderRadius.circular(25)),
                   child: Text(
                     "\$150",
                     style: TextStyle(
                         color: Colors.white,
-                        fontFamily: typo.WorkSansSemiBold,
+                        fontFamily: Typo.semiBold,
                         fontSize: 14.sp),
                   ),
                 ),
@@ -156,8 +154,8 @@ class _ServiceListState extends State<ServiceList> {
                       Text(
                         "4.3",
                         style: TextStyle(
-                            color: AppColor.GreyTExtColor,
-                            fontFamily: typo.WorkSansSemiBold,
+                            color: AppColors.GreyTExtColor,
+                            fontFamily: Typo.semiBold,
                             fontSize: 12.sp),
                       )
                     ],
@@ -169,7 +167,7 @@ class _ServiceListState extends State<ServiceList> {
                     "Fixing Smart Devices",
                     style: TextStyle(
                         color: Colors.black,
-                        fontFamily: typo.WorkSansMedium,
+                        fontFamily: Typo.medium,
                         fontSize: 14.sp),
                   ),
                   SizedBox(
@@ -180,7 +178,7 @@ class _ServiceListState extends State<ServiceList> {
                     children: [
                       CircleAvatar(
                         radius: 15,
-                        child: Image.asset(Asseturl.iguserimg),
+                        child: Image.asset(AssetUrl.iguserimg),
                       ),
                       SizedBox(
                         width: 10.w,
@@ -188,8 +186,8 @@ class _ServiceListState extends State<ServiceList> {
                       Text(
                         "Emma Grate",
                         style: TextStyle(
-                            color: AppColor.GreyTExtColor,
-                            fontFamily: typo.WorkSansMedium,
+                            color: AppColors.GreyTExtColor,
+                            fontFamily: Typo.medium,
                             fontSize: 12.sp),
                       ),
                     ],

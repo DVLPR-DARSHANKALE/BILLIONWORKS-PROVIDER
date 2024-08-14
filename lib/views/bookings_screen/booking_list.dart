@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/views/booking_on_tap.dart';
-import 'package:provider/views/paymentscreen.dart';
+import 'package:provider/views/bookings_screen/booking_on_tap.dart';
+import 'package:provider/views/payment_screen/paymentscreen.dart';
 
-import '../consts/packages.dart';
+import '../../consts/packages.dart';
 
 class BookingList extends StatefulWidget {
   BookingList({super.key});
@@ -31,7 +30,7 @@ class _BookingListState extends State<BookingList> {
             Container(
               width: double.infinity,
               padding: EdgeInsets.all(16),
-              color: AppColor.mainColor,
+              color: AppColors.primaryColor,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -40,7 +39,7 @@ class _BookingListState extends State<BookingList> {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16.sp,
-                        fontFamily: typo.WorkSansMedium),
+                        fontFamily: Typo.medium),
                   ),
                   IconButton(
                       onPressed: () {
@@ -65,7 +64,7 @@ class _BookingListState extends State<BookingList> {
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage(
-                          Asseturl.igCarpenterPhoto,
+                          AssetUrl.igCarpenterPhoto,
                         ),
                       ),
                     ),
@@ -82,14 +81,14 @@ class _BookingListState extends State<BookingList> {
                             "Car wash and cleaning",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 16.sp),
                           ),
                           Text(
                             "\$120",
                             style: TextStyle(
-                                color: AppColor.mainColor,
-                                fontFamily: typo.WorkSansSemiBold,
+                                color: AppColors.primaryColor,
+                                fontFamily: Typo.semiBold,
                                 fontSize: 22.sp),
                           ),
                         ],
@@ -104,20 +103,20 @@ class _BookingListState extends State<BookingList> {
                             "Date",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                           Text(
                             "25 Feb, 2022",
                             style: TextStyle(
-                                color: AppColor.GreyTExtColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.GreyTExtColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                         ],
                       ),
                       Divider(
-                        color: AppColor.DividarColor,
+                        color: AppColors.DividarColor,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,20 +125,20 @@ class _BookingListState extends State<BookingList> {
                             "Time",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                           Text(
                             "08:30 AM",
                             style: TextStyle(
-                                color: AppColor.GreyTExtColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.GreyTExtColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                         ],
                       ),
                       Divider(
-                        color: AppColor.DividarColor,
+                        color: AppColors.DividarColor,
                       ),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,7 +148,7 @@ class _BookingListState extends State<BookingList> {
                             "Location",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                           Column(
@@ -158,15 +157,15 @@ class _BookingListState extends State<BookingList> {
                               Text(
                                 "4517 Washington Ave. ",
                                 style: TextStyle(
-                                    color: AppColor.GreyTExtColor,
-                                    fontFamily: typo.WorkSansMedium,
+                                    color: AppColors.GreyTExtColor,
+                                    fontFamily: Typo.medium,
                                     fontSize: 12.sp),
                               ),
                               Text(
                                 "Manchester, Kentucky 39495",
                                 style: TextStyle(
-                                    color: AppColor.GreyTExtColor,
-                                    fontFamily: typo.WorkSansMedium,
+                                    color: AppColors.GreyTExtColor,
+                                    fontFamily: Typo.medium,
                                     fontSize: 12.sp),
                               ),
                             ],
@@ -174,7 +173,7 @@ class _BookingListState extends State<BookingList> {
                         ],
                       ),
                       Divider(
-                        color: AppColor.DividarColor,
+                        color: AppColors.DividarColor,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -183,20 +182,20 @@ class _BookingListState extends State<BookingList> {
                             "Service Status",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                           Text(
                             "Accepted",
                             style: TextStyle(
-                                color: AppColor.GreyTExtColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.GreyTExtColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                         ],
                       ),
                       Divider(
-                        color: AppColor.DividarColor,
+                        color: AppColors.DividarColor,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -205,20 +204,20 @@ class _BookingListState extends State<BookingList> {
                             "Quantity",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                           Text(
                             "*1",
                             style: TextStyle(
-                                color: AppColor.GreyTExtColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.GreyTExtColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                         ],
                       ),
                       Divider(
-                        color: AppColor.DividarColor,
+                        color: AppColors.DividarColor,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -227,14 +226,14 @@ class _BookingListState extends State<BookingList> {
                             "Payment Status",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                           Text(
                             "Pending",
                             style: TextStyle(
-                                color: AppColor.GreyTExtColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.GreyTExtColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 12.sp),
                           ),
                         ],
@@ -263,7 +262,7 @@ class _BookingListState extends State<BookingList> {
                         "Confirm",
                         style: TextStyle(
                             color: Colors.white,
-                            fontFamily: typo.WorkSansMedium,
+                            fontFamily: Typo.medium,
                             fontSize: 16.sp),
                       ),
                     ),
@@ -291,7 +290,7 @@ class _BookingListState extends State<BookingList> {
             Container(
               width: double.infinity,
               padding: EdgeInsets.all(16),
-              color: AppColor.mainColor,
+              color: AppColors.primaryColor,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -299,7 +298,7 @@ class _BookingListState extends State<BookingList> {
                     "Assign Handyman",
                     style: TextStyle(
                         color: Colors.white,
-                        fontFamily: typo.WorkSansMedium,
+                        fontFamily: Typo.medium,
                         fontSize: 16.sp),
                   ),
                   IconButton(
@@ -330,7 +329,7 @@ class _BookingListState extends State<BookingList> {
                               height: 16.h,
                             ),
                             Divider(
-                              color: AppColor.DividarColor,
+                              color: AppColors.DividarColor,
                             ),
                             SizedBox(
                               height: 16.h,
@@ -340,7 +339,7 @@ class _BookingListState extends State<BookingList> {
                               height: 16.h,
                             ),
                             Divider(
-                              color: AppColor.DividarColor,
+                              color: AppColors.DividarColor,
                             ),
                             SizedBox(
                               height: 16.h,
@@ -350,7 +349,7 @@ class _BookingListState extends State<BookingList> {
                               height: 16.h,
                             ),
                             Divider(
-                              color: AppColor.DividarColor,
+                              color: AppColors.DividarColor,
                             ),
                             SizedBox(
                               height: 16.h,
@@ -367,7 +366,7 @@ class _BookingListState extends State<BookingList> {
                               height: 16.h,
                             ),
                             Divider(
-                              color: AppColor.DividarColor,
+                              color: AppColors.DividarColor,
                             ),
                             SizedBox(
                               height: 16.h,
@@ -377,7 +376,7 @@ class _BookingListState extends State<BookingList> {
                               height: 16.h,
                             ),
                             Divider(
-                              color: AppColor.DividarColor,
+                              color: AppColors.DividarColor,
                             ),
                             SizedBox(
                               height: 16.h,
@@ -387,7 +386,7 @@ class _BookingListState extends State<BookingList> {
                               height: 16.h,
                             ),
                             Divider(
-                              color: AppColor.DividarColor,
+                              color: AppColors.DividarColor,
                             ),
                             SizedBox(
                               height: 16.h,
@@ -425,7 +424,7 @@ class _BookingListState extends State<BookingList> {
                         "Confirm",
                         style: TextStyle(
                             color: Colors.white,
-                            fontFamily: typo.WorkSansMedium,
+                            fontFamily: Typo.medium,
                             fontSize: 16.sp),
                       ),
                     ),
@@ -444,7 +443,7 @@ class _BookingListState extends State<BookingList> {
       children: [
         CircleAvatar(
           radius: 30,
-          backgroundImage: AssetImage(Asseturl.igserviceimg2),
+          backgroundImage: AssetImage(AssetUrl.igserviceimg2),
         ),
         SizedBox(
           width: 16,
@@ -456,14 +455,14 @@ class _BookingListState extends State<BookingList> {
               "Naomie Hackett",
               style: TextStyle(
                   color: Colors.black,
-                  fontFamily: typo.WorkSansMedium,
+                  fontFamily: Typo.medium,
                   fontSize: 14.sp),
             ),
             Text(
               "Member since 2015",
               style: TextStyle(
-                  color: AppColor.GreyTExtColor,
-                  fontFamily: typo.WorkSansMedium,
+                  color: AppColors.GreyTExtColor,
+                  fontFamily: Typo.medium,
                   fontSize: 14.sp),
             ),
           ],
@@ -480,11 +479,9 @@ class _BookingListState extends State<BookingList> {
         title: Text(
           "Booking",
           style: TextStyle(
-              color: Colors.white,
-              fontFamily: typo.WorkSansMedium,
-              fontSize: 18.sp),
+              color: Colors.white, fontFamily: Typo.medium, fontSize: 18.sp),
         ),
-        backgroundColor: AppColor.mainColor,
+        backgroundColor: AppColors.primaryColor,
       ),
       body: Container(
         padding: EdgeInsets.all(20),
@@ -520,8 +517,7 @@ class _BookingListState extends State<BookingList> {
   bookinglisttile(context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).goNamed(BookingOnTap.id);
-        setState(() {});
+        GoRouter.of(context).pushNamed(BookingOnTap.id);
       },
       child: Container(
         margin: EdgeInsets.only(bottom: 24),
@@ -541,12 +537,13 @@ class _BookingListState extends State<BookingList> {
                   height: 130.h,
                   width: double.infinity,
                   child: Image(
-                    image: AssetImage(Asseturl.igbuilding2),
+                    image: AssetImage(AssetUrl.igbuilding2),
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Positioned(
-                  top: 10,
-                  left: 10,
+                  top: 10.h,
+                  left: 10.w,
                   child: Container(
                     alignment: Alignment.center,
                     height: 26.h,
@@ -558,7 +555,7 @@ class _BookingListState extends State<BookingList> {
                       "Pending",
                       style: TextStyle(
                           color: Colors.white,
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 12.sp),
                     ),
                   ),
@@ -575,7 +572,7 @@ class _BookingListState extends State<BookingList> {
                   "Floor Cleaning",
                   style: TextStyle(
                       color: Colors.black,
-                      fontFamily: typo.WorkSansMedium,
+                      fontFamily: Typo.medium,
                       fontSize: 16.sp),
                 ),
                 Container(
@@ -583,14 +580,14 @@ class _BookingListState extends State<BookingList> {
                   height: 24.h,
                   width: 52.w,
                   decoration: BoxDecoration(
-                    color: AppColor.mainColor,
+                    color: AppColors.primaryColor,
                     borderRadius: BorderRadius.circular(43),
                   ),
                   child: Text(
                     "#123",
                     style: TextStyle(
                         color: Colors.white,
-                        fontFamily: typo.WorkSansSemiBold,
+                        fontFamily: Typo.semiBold,
                         fontSize: 14.sp),
                   ),
                 ),
@@ -604,8 +601,8 @@ class _BookingListState extends State<BookingList> {
                 Text(
                   "\$120",
                   style: TextStyle(
-                      color: AppColor.mainColor,
-                      fontFamily: typo.WorkSansMedium,
+                      color: AppColors.primaryColor,
+                      fontFamily: Typo.medium,
                       fontWeight: FontWeight.bold,
                       fontSize: 22.sp),
                 ),
@@ -616,7 +613,7 @@ class _BookingListState extends State<BookingList> {
                   "21% Off",
                   style: TextStyle(
                       color: Colors.green,
-                      fontFamily: typo.WorkSansSemiBold,
+                      fontFamily: Typo.semiBold,
                       fontWeight: FontWeight.bold,
                       fontSize: 12.sp),
                 ),
@@ -638,8 +635,8 @@ class _BookingListState extends State<BookingList> {
                 Text(
                   "1901 Thornridge Cir. Shiloh, Hawaii 81063",
                   style: TextStyle(
-                      color: AppColor.textColor,
-                      fontFamily: typo.WorkSansMedium,
+                      color: AppColors.textColor,
+                      fontFamily: Typo.medium,
                       fontSize: 12.sp),
                 ),
               ],
@@ -660,15 +657,15 @@ class _BookingListState extends State<BookingList> {
                 Text(
                   "02 Febuary, 2022 At ",
                   style: TextStyle(
-                      color: AppColor.textColor,
-                      fontFamily: typo.WorkSansMedium,
+                      color: AppColors.textColor,
+                      fontFamily: Typo.medium,
                       fontSize: 12.sp),
                 ),
                 Text(
                   "8:30 AM ",
                   style: TextStyle(
                       color: Colors.black,
-                      fontFamily: typo.WorkSansMedium,
+                      fontFamily: Typo.medium,
                       fontSize: 12.sp),
                 ),
               ],
@@ -689,8 +686,8 @@ class _BookingListState extends State<BookingList> {
                 Text(
                   "Arlene McCoy",
                   style: TextStyle(
-                      color: AppColor.textColor,
-                      fontFamily: typo.WorkSansMedium,
+                      color: AppColors.textColor,
+                      fontFamily: Typo.medium,
                       fontSize: 12.sp),
                 ),
               ],
@@ -703,9 +700,7 @@ class _BookingListState extends State<BookingList> {
             ),
             Row(
               children: [
-                SizedBox(
-                  height: 38.h,
-                  width: 135.w,
+                Expanded(
                   child: FilledButton(
                     style: ButtonStyle(
                         shape: WidgetStatePropertyAll(
@@ -717,15 +712,13 @@ class _BookingListState extends State<BookingList> {
                     },
                     child: Text("Accept",
                         style: TextStyle(
-                            fontFamily: typo.WorkSansMedium, fontSize: 14.sp)),
+                            fontFamily: Typo.medium, fontSize: 14.sp)),
                   ),
                 ),
                 SizedBox(
                   width: 20.w,
                 ),
-                SizedBox(
-                  height: 38.h,
-                  width: 135.w,
+                Expanded(
                   child: FilledButton(
                     style: ButtonStyle(
                         backgroundColor: WidgetStatePropertyAll(
@@ -740,7 +733,7 @@ class _BookingListState extends State<BookingList> {
                       "Decline",
                       style: TextStyle(
                           color: Color(0xff1C1F34),
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                   ),

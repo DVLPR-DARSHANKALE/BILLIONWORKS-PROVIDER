@@ -1,7 +1,8 @@
-class typo {
-  static String WorkSansRegular = "WorkSans-Regular";
-  static String WorkSansMedium = "WorkSans-Medium";
-  static String WorkSansBold = " WorkSans-Bold";
-  static String WorkSansSemiBold = "WorkSans-SemiBold";
-  static String WorkSansSemiBoldItalic = "WorkSans-SemiBoldIlalic";
+// ignore: file_names
+class Typo {
+  static String regular = "WorkSans-Regular";
+  static String medium = "WorkSans-Medium";
+  static String bold = " WorkSans-Bold";
+  static String semiBold = "WorkSans-SemiBold";
+  static String semiBoldItalic = "WorkSans-SemiBoldIlalic";
 }

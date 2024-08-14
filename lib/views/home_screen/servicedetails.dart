@@ -23,7 +23,7 @@ class Servicedetails extends StatelessWidget {
                   Container(
                     width: double.infinity,
                     child: Image.asset(
-                      Asseturl.igsevicedetailsimg1,
+                      AssetUrl.igsevicedetailsimg1,
                       height: 400,
                       fit: BoxFit.cover,
                     ),
@@ -77,7 +77,7 @@ class Servicedetails extends StatelessWidget {
                             "TV Wall Mount Installation",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: typo.WorkSansMedium,
+                                fontFamily: Typo.medium,
                                 fontSize: 22.sp),
                           ),
                           SizedBox(
@@ -88,8 +88,8 @@ class Servicedetails extends StatelessWidget {
                               Text(
                                 "\$500",
                                 style: TextStyle(
-                                    color: AppColor.mainColor,
-                                    fontFamily: typo.WorkSansSemiBold,
+                                    color: AppColors.primaryColor,
+                                    fontFamily: Typo.semiBold,
                                     fontSize: 20.sp),
                               ),
                               SizedBox(
@@ -98,8 +98,8 @@ class Servicedetails extends StatelessWidget {
                               Text(
                                 "10% off",
                                 style: TextStyle(
-                                    color: AppColor.GreyTExtColor,
-                                    fontFamily: typo.WorkSansSemiBold,
+                                    color: AppColors.GreyTExtColor,
+                                    fontFamily: Typo.semiBold,
                                     fontSize: 14.sp),
                               ),
                             ],
@@ -114,7 +114,7 @@ class Servicedetails extends StatelessWidget {
                                 "Duration :",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontFamily: typo.WorkSansRegular,
+                                    fontFamily: Typo.regular,
                                     fontSize: 14.sp),
                               ),
                               SizedBox(
@@ -123,8 +123,8 @@ class Servicedetails extends StatelessWidget {
                               Text(
                                 "01 Hour",
                                 style: TextStyle(
-                                    color: AppColor.mainColor,
-                                    fontFamily: typo.WorkSansMedium,
+                                    color: AppColors.primaryColor,
+                                    fontFamily: Typo.medium,
                                     fontSize: 14.sp),
                               ),
                             ],
@@ -139,7 +139,7 @@ class Servicedetails extends StatelessWidget {
                                 "Rating :",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontFamily: typo.WorkSansRegular,
+                                    fontFamily: Typo.regular,
                                     fontSize: 14.sp),
                               ),
                               SizedBox(
@@ -153,8 +153,8 @@ class Servicedetails extends StatelessWidget {
                               Text(
                                 "4.5",
                                 style: TextStyle(
-                                    color: AppColor.GreyTExtColor,
-                                    fontFamily: typo.WorkSansMedium,
+                                    color: AppColors.GreyTExtColor,
+                                    fontFamily: Typo.medium,
                                     fontSize: 14.sp),
                               ),
                             ],
@@ -177,14 +177,14 @@ class Servicedetails extends StatelessWidget {
                       "Description",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 16.sp),
                     ),
                     Text(
                       "It is a long established fact that a reader will be \ndistracted by the readable content of a page \nwhen looking at its layout. ",
                       style: TextStyle(
-                          color: AppColor.GreyTExtColor,
-                          fontFamily: typo.WorkSansMedium,
+                          color: AppColors.GreyTExtColor,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -204,14 +204,14 @@ class Servicedetails extends StatelessWidget {
                           "Gallery",
                           style: TextStyle(
                               color: Colors.black,
-                              fontFamily: typo.WorkSansMedium,
+                              fontFamily: Typo.medium,
                               fontSize: 16.sp),
                         ),
                         Text(
                           "View All",
                           style: TextStyle(
-                              color: AppColor.GreyTExtColor,
-                              fontFamily: typo.WorkSansSemiBold,
+                              color: AppColors.GreyTExtColor,
+                              fontFamily: Typo.semiBold,
                               fontSize: 12.sp),
                         ),
                       ],
@@ -233,7 +233,7 @@ class Servicedetails extends StatelessWidget {
                               borderRadius: BorderRadius.circular(5.r),
                             ),
                             child: Image.asset(
-                              Asseturl.igsevicedetailsimg1,
+                              AssetUrl.igsevicedetailsimg1,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -250,16 +250,16 @@ class Servicedetails extends StatelessWidget {
                   children: [
                     Text(
                       "Reviews",
-                      style: TextStyle(
-                          fontFamily: typo.WorkSansMedium, fontSize: 16.sp),
+                      style:
+                          TextStyle(fontFamily: Typo.medium, fontSize: 16.sp),
                     ),
                     GestureDetector(
                       onTap: () {},
                       child: Text(
                         "View All",
                         style: TextStyle(
-                            color: AppColor.textColor,
-                            fontFamily: typo.WorkSansMedium,
+                            color: AppColors.textColor,
+                            fontFamily: Typo.medium,
                             fontSize: 12.sp),
                       ),
                     ),
@@ -275,7 +275,7 @@ class Servicedetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CircleAvatar(
-                      backgroundImage: AssetImage(Asseturl.igbackgroundimg3),
+                      backgroundImage: AssetImage(AssetUrl.igbackgroundimg3),
                       radius: 25,
                     ),
                     SizedBox(
@@ -290,7 +290,7 @@ class Servicedetails extends StatelessWidget {
                               "Donna Bins",
                               style: TextStyle(
                                   color: Colors.black,
-                                  fontFamily: typo.WorkSansMedium,
+                                  fontFamily: Typo.medium,
                                   fontSize: 14.sp),
                             ),
                             SizedBox(
@@ -299,8 +299,8 @@ class Servicedetails extends StatelessWidget {
                             Text(
                               "02 Dec",
                               style: TextStyle(
-                                  color: AppColor.textColor,
-                                  fontFamily: typo.WorkSansMedium,
+                                  color: AppColors.textColor,
+                                  fontFamily: Typo.medium,
                                   fontSize: 12.sp),
                             ),
                           ],
@@ -320,8 +320,8 @@ class Servicedetails extends StatelessWidget {
                             Text(
                               "4.5",
                               style: TextStyle(
-                                  color: AppColor.textColor,
-                                  fontFamily: typo.WorkSansMedium,
+                                  color: AppColors.textColor,
+                                  fontFamily: Typo.medium,
                                   fontSize: 14.sp),
                             ),
                           ],
@@ -332,8 +332,8 @@ class Servicedetails extends StatelessWidget {
                         Text(
                           "Amal is incredible at what he does,\nvery prompt with delivery and any \nrevisions.",
                           style: TextStyle(
-                              color: AppColor.textColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.textColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         )
                       ],
@@ -350,7 +350,7 @@ class Servicedetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CircleAvatar(
-                      backgroundImage: AssetImage(Asseturl.igbackgroundimg3),
+                      backgroundImage: AssetImage(AssetUrl.igbackgroundimg3),
                       radius: 25,
                     ),
                     SizedBox(
@@ -365,7 +365,7 @@ class Servicedetails extends StatelessWidget {
                               "Saul Armstrong",
                               style: TextStyle(
                                   color: Colors.black,
-                                  fontFamily: typo.WorkSansMedium,
+                                  fontFamily: Typo.medium,
                                   fontSize: 14.sp),
                             ),
                             SizedBox(
@@ -374,8 +374,8 @@ class Servicedetails extends StatelessWidget {
                             Text(
                               "25 Jan",
                               style: TextStyle(
-                                  color: AppColor.textColor,
-                                  fontFamily: typo.WorkSansMedium,
+                                  color: AppColors.textColor,
+                                  fontFamily: Typo.medium,
                                   fontSize: 12.sp),
                             ),
                           ],
@@ -395,8 +395,8 @@ class Servicedetails extends StatelessWidget {
                             Text(
                               "4.5",
                               style: TextStyle(
-                                  color: AppColor.textColor,
-                                  fontFamily: typo.WorkSansMedium,
+                                  color: AppColors.textColor,
+                                  fontFamily: Typo.medium,
                                   fontSize: 14.sp),
                             ),
                           ],
@@ -407,8 +407,8 @@ class Servicedetails extends StatelessWidget {
                         Text(
                           "Amal is incredible at what he does,\nvery prompt with delivery and any \nrevisions.",
                           style: TextStyle(
-                              color: AppColor.textColor,
-                              fontFamily: typo.WorkSansMedium,
+                              color: AppColors.textColor,
+                              fontFamily: Typo.medium,
                               fontSize: 14.sp),
                         )
                       ],

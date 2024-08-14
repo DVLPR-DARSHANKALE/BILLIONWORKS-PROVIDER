@@ -3,23 +3,25 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/consts/TypoGraphay.dart';
 import 'package:provider/consts/colorpallate.dart';
-import 'package:provider/views/Login_screen.dart';
-import 'package:provider/views/SingUp_screen.dart';
-import 'package:provider/views/booking_list.dart';
-import 'package:provider/views/booking_on_tap.dart';
+import 'package:provider/views/auth/login_screen.dart';
+import 'package:provider/views/auth/SingUp_screen.dart';
+import 'package:provider/views/bookings_screen/booking_list.dart';
+import 'package:provider/views/bookings_screen/booking_on_tap.dart';
+import 'package:provider/views/home/home.dart';
 import 'package:provider/views/home_screen/home_screen.dart';
-import 'package:provider/views/paymentscreen.dart';
-import 'package:provider/views/reviewservice_screen.dart';
-import 'package:provider/views/service_list.dart';
-import 'package:provider/views/servicedetails.dart';
-import 'package:provider/views/splash_screen.dart';
+import 'package:provider/views/payment_screen/paymentscreen.dart';
+import 'package:provider/views/bookings_screen/reviewservice_screen.dart';
+import 'package:provider/views/home_screen/service_list.dart';
+import 'package:provider/views/home_screen/servicedetails.dart';
+import 'package:provider/views/auth/splash_screen.dart';
 
 void main() {
-  runApp(Provider());
+  runApp(BillionWorksProvider());
 }
 
-class Provider extends StatelessWidget {
-  Provider({super.key});
+// ignore: must_be_immutable
+class BillionWorksProvider extends StatelessWidget {
+  BillionWorksProvider({super.key});
 
   GoRouter router = GoRouter(
     routes: [
@@ -41,7 +43,12 @@ class Provider extends StatelessWidget {
         ],
       ),
       GoRoute(
-        path: "/home",
+        path: '/home',
+        name: Home.id,
+        builder: (context, state) => Home(),
+      ),
+      GoRoute(
+        path: "/homeScreen",
         name: HomeScreen.id,
         builder: (context, state) => HomeScreen(),
         routes: [
@@ -85,24 +92,47 @@ class Provider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812),
+      designSize: const Size(375, 812),
       builder: (context, widget) {
         return MaterialApp.router(
           routerConfig: router,
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
+            colorScheme: ColorScheme.light(
+              primary: AppColors.primaryColor,
+            ),
+            // FILLED BUTTON THEME
+            filledButtonTheme: FilledButtonThemeData(
+              style: ButtonStyle(
+                shape: WidgetStatePropertyAll(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                      5.r,
+                    ),
+                  ),
+                ),
+                textStyle: WidgetStatePropertyAll(
+                  TextStyle(
+                      fontFamily: Typo.medium,
+                      color: Colors.white,
+                      fontSize: 16.sp),
+                ),
+              ),
+            ),
+
+            /// INPUT DECORATION
             inputDecorationTheme: InputDecorationTheme(
               fillColor: Color(0xffF6F7F9),
               hintStyle: TextStyle(
-                  color: AppColor.textColor,
-                  fontFamily: typo.WorkSansMedium,
+                  color: AppColors.textColor,
+                  fontFamily: Typo.medium,
                   fontSize: 14),
               filled: true,
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none),
             ),
-            scaffoldBackgroundColor: AppColor.whiteColor,
+            scaffoldBackgroundColor: AppColors.whiteColor,
           ),
         );
       },

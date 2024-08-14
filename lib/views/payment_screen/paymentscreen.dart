@@ -10,13 +10,11 @@ class Paymentscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColor.mainColor,
+        backgroundColor: AppColors.primaryColor,
         title: Text(
           "Payment",
           style: TextStyle(
-              color: Colors.white,
-              fontFamily: typo.WorkSansMedium,
-              fontSize: 18.sp),
+              color: Colors.white, fontFamily: Typo.medium, fontSize: 18.sp),
         ),
       ),
       body: Container(
@@ -40,7 +38,7 @@ class Paymentscreen extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColor.DividarColor),
+        border: Border.all(color: AppColors.DividarColor),
       ),
       child: Column(
         children: [
@@ -58,14 +56,14 @@ class Paymentscreen extends StatelessWidget {
                   "Alexis Lockman",
                   style: TextStyle(
                       color: Colors.black,
-                      fontFamily: typo.WorkSansMedium,
+                      fontFamily: Typo.medium,
                       fontSize: 18.sp),
                 ),
                 Text(
                   "#123",
                   style: TextStyle(
-                      color: AppColor.mainColor,
-                      fontFamily: typo.WorkSansSemiBold,
+                      color: AppColors.primaryColor,
+                      fontFamily: Typo.semiBold,
                       fontSize: 18.sp),
                 ),
               ],
@@ -85,14 +83,14 @@ class Paymentscreen extends StatelessWidget {
                       "ID",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                     Text(
                       "#12",
                       style: TextStyle(
-                          color: AppColor.GreyTExtColor,
-                          fontFamily: typo.WorkSansMedium,
+                          color: AppColors.GreyTExtColor,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -101,7 +99,7 @@ class Paymentscreen extends StatelessWidget {
                   height: 10.h,
                 ),
                 Divider(
-                  color: AppColor.DividarColor,
+                  color: AppColors.DividarColor,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -110,14 +108,14 @@ class Paymentscreen extends StatelessWidget {
                       "Status",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                     Text(
                       "Pending",
                       style: TextStyle(
-                          color: AppColor.GreyTExtColor,
-                          fontFamily: typo.WorkSansMedium,
+                          color: AppColors.GreyTExtColor,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -126,7 +124,7 @@ class Paymentscreen extends StatelessWidget {
                   height: 10.h,
                 ),
                 Divider(
-                  color: AppColor.DividarColor,
+                  color: AppColors.DividarColor,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -135,14 +133,14 @@ class Paymentscreen extends StatelessWidget {
                       "Method",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                     Text(
                       "Cash",
                       style: TextStyle(
-                          color: AppColor.GreyTExtColor,
-                          fontFamily: typo.WorkSansMedium,
+                          color: AppColors.GreyTExtColor,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                   ],
@@ -151,7 +149,7 @@ class Paymentscreen extends StatelessWidget {
                   height: 10.h,
                 ),
                 Divider(
-                  color: AppColor.DividarColor,
+                  color: AppColors.DividarColor,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -160,14 +158,14 @@ class Paymentscreen extends StatelessWidget {
                       "Amount Paid",
                       style: TextStyle(
                           color: Colors.black,
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 14.sp),
                     ),
                     Text(
                       "\$1500",
                       style: TextStyle(
-                          color: AppColor.mainColor,
-                          fontFamily: typo.WorkSansSemiBold,
+                          color: AppColors.primaryColor,
+                          fontFamily: Typo.semiBold,
                           fontSize: 14.sp),
                     ),
                   ],

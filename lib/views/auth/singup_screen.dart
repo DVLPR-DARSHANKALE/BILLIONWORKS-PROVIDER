@@ -4,8 +4,10 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/consts/AssetUrl.dart';
 import 'package:provider/consts/TypoGraphay.dart';
 import 'package:provider/consts/colorpallate.dart';
-import 'package:provider/views/Login_screen.dart';
+import 'package:provider/views/auth/login_screen.dart';
+import 'package:provider/views/home/home.dart';
 import 'package:provider/views/home_screen/home_screen.dart';
+import 'package:provider/views/shared_widgets/custom_textfield.dart';
 
 class SingupScreen extends StatelessWidget {
   const SingupScreen({super.key});
@@ -27,46 +29,29 @@ class SingupScreen extends StatelessWidget {
                 height: 80.h,
                 width: 80.w,
                 decoration: BoxDecoration(
-                  color: AppColor.mainColor,
+                  color: AppColors.primaryColor,
                   shape: BoxShape.circle,
                 ),
                 child: Image.asset(
-                  Asseturl.igpersonicon,
+                  AssetUrl.igpersonicon,
                   height: 36.h,
                   width: 36.h,
                 ),
               ),
               Text(
                 "Hello User!",
-                style:
-                    TextStyle(fontFamily: typo.WorkSansMedium, fontSize: 22.sp),
+                style: TextStyle(fontFamily: Typo.medium, fontSize: 22.sp),
               ),
               Text(
                 textAlign: TextAlign.center,
                 "Welcome Back, you have been\nmissed for long Time",
-                style: TextStyle(color: AppColor.GreyTExtColor),
+                style: TextStyle(color: AppColors.GreyTExtColor),
               ),
               SizedBox(
                 height: 38.h,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  suffixIcon: Image.asset(
-                    Asseturl.igpersonicon,
-                    scale: 2,
-                    color: AppColor.GreyTExtColor,
-                  ),
-                  filled: true,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none),
-                  fillColor: Color(0xffF6F7F9),
-                  hintText: "Full Name",
-                  hintStyle: TextStyle(
-                      color: AppColor.textColor,
-                      fontFamily: typo.WorkSansMedium,
-                      fontSize: 14),
-                ),
+              customTextField(
+                hint: "Full Name",
               ),
               SizedBox(
                 height: 24.h,
@@ -74,30 +59,22 @@ class SingupScreen extends StatelessWidget {
               TextField(
                 decoration: InputDecoration(
                   hintText: "User Name",
-                  suffixIcon: Image.asset(Asseturl.igpersonicon,
-                      scale: 2, color: AppColor.GreyTExtColor),
+                  suffixIcon: Image.asset(AssetUrl.igpersonicon,
+                      scale: 2, color: AppColors.GreyTExtColor),
                 ),
               ),
               SizedBox(
                 height: 24.h,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  labelText: "Email",
-                  border: OutlineInputBorder(),
-                  hintText: "saul@user.com",
-                  suffixIcon: Image.asset(Asseturl.igmassageicon,
-                      scale: 4, color: AppColor.GreyTExtColor),
-                ),
-              ),
+              customTextField(hint: "Email"),
               SizedBox(
                 height: 24.h,
               ),
               TextField(
                 decoration: InputDecoration(
                   hintText: "Contact Number",
-                  suffixIcon: Image.asset(Asseturl.igcallingicon2,
-                      scale: 4, color: AppColor.GreyTExtColor),
+                  suffixIcon: Image.asset(AssetUrl.igcallingicon2,
+                      scale: 4, color: AppColors.GreyTExtColor),
                 ),
               ),
               SizedBox(
@@ -106,8 +83,8 @@ class SingupScreen extends StatelessWidget {
               TextField(
                 decoration: InputDecoration(
                   hintText: "Password",
-                  suffixIcon: Image.asset(Asseturl.ighide,
-                      scale: 4, color: AppColor.GreyTExtColor),
+                  suffixIcon: Image.asset(AssetUrl.ighide,
+                      scale: 4, color: AppColors.GreyTExtColor),
                 ),
               ),
               SizedBox(
@@ -117,13 +94,8 @@ class SingupScreen extends StatelessWidget {
                 height: 45.h,
                 width: double.infinity,
                 child: FilledButton(
-                  style: FilledButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
                   onPressed: () {
-                    GoRouter.of(context).goNamed(HomeScreen.id);
+                    GoRouter.of(context).goNamed(Home.id);
                   },
                   child: Container(child: Text("SIGNUP")),
                 ),
@@ -134,8 +106,8 @@ class SingupScreen extends StatelessWidget {
                   Text(
                     "Already have an account?",
                     style: TextStyle(
-                        color: AppColor.GreyTExtColor,
-                        fontFamily: typo.WorkSansMedium,
+                        color: AppColors.GreyTExtColor,
+                        fontFamily: Typo.medium,
                         fontSize: 14.sp),
                   ),
                   TextButton(
@@ -146,8 +118,8 @@ class SingupScreen extends StatelessWidget {
                       "Sign In",
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: AppColor.mainColor,
-                          fontFamily: typo.WorkSansSemiBoldItalic),
+                          color: AppColors.primaryColor,
+                          fontFamily: Typo.semiBoldItalic),
                     ),
                   ),
                 ],

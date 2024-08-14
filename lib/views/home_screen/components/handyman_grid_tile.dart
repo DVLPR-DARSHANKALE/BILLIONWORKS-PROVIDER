@@ -12,7 +12,7 @@ Container handymanGridTile({icon, isAvailable = false}) {
       children: [
         Stack(
           children: [
-            Image.asset(Asseturl.igimagecard1),
+            Image.asset(AssetUrl.igimagecard1),
             Positioned(
               right: 14,
               top: 10,
@@ -38,9 +38,7 @@ Container handymanGridTile({icon, isAvailable = false}) {
         Text(
           "Rickey Ledner",
           style: TextStyle(
-              color: Colors.black,
-              fontFamily: typo.WorkSansMedium,
-              fontSize: 16.sp),
+              color: Colors.black, fontFamily: Typo.medium, fontSize: 16.sp),
         ),
         SizedBox(
           height: 15.h,
@@ -54,8 +52,8 @@ Container handymanGridTile({icon, isAvailable = false}) {
                 0xffF0F0FA,
               ),
               child: Image.asset(
-                Asseturl.igcallingicon2,
-                color: AppColor.mainColor,
+                AssetUrl.igcallingicon2,
+                color: AppColors.primaryColor,
                 scale: 4,
               ),
             ),
@@ -68,8 +66,8 @@ Container handymanGridTile({icon, isAvailable = false}) {
                 0xffF0F0FA,
               ),
               child: Image.asset(
-                Asseturl.igmassageicon,
-                color: AppColor.mainColor,
+                AssetUrl.igmassageicon,
+                color: AppColors.primaryColor,
                 scale: 4,
               ),
             ),
@@ -82,8 +80,8 @@ Container handymanGridTile({icon, isAvailable = false}) {
                 0xffF0F0FA,
               ),
               child: Image.asset(
-                Asseturl.igchaticon,
-                color: AppColor.mainColor,
+                AssetUrl.igchaticon,
+                color: AppColors.primaryColor,
                 scale: 4,
               ),
             )

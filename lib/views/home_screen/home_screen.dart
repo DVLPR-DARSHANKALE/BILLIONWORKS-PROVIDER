@@ -6,9 +6,8 @@ import 'package:provider/consts/TypoGraphay.dart';
 import 'package:provider/consts/colorpallate.dart';
 import 'package:provider/views/home_screen/components/dashboard_grid_tile.dart';
 import 'package:provider/views/home_screen/components/handyman_grid_tile.dart';
-import 'package:provider/views/service_list.dart';
+import 'package:provider/views/home_screen/service_list.dart';
 import 'package:provider/views/shared_widgets/services_grid_tile.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,26 +18,24 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColor.mainColor,
+        backgroundColor: AppColors.primaryColor,
         title: Text(
           "Home",
           style: TextStyle(
-              color: Colors.white,
-              fontFamily: typo.WorkSansMedium,
-              fontSize: 18.sp),
+              color: Colors.white, fontFamily: Typo.medium, fontSize: 18.sp),
         ),
         actions: [
           Image.asset(
-            Asseturl.igchaticon,
+            AssetUrl.igchaticon,
             scale: 4,
           ),
           SizedBox(
             width: 10.w,
           ),
           Image.asset(
-            Asseturl.igpersonicon,
+            AssetUrl.igpersonicon,
             scale: 2,
-            color: AppColor.whiteColor,
+            color: AppColors.whiteColor,
           ),
           SizedBox(
             width: 20.w,
@@ -46,6 +43,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Container(
+        width: double.infinity,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -53,6 +51,7 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
+                    // DASHBOARD CARD WIDGET
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(4),
@@ -62,9 +61,11 @@ class HomeScreen extends StatelessWidget {
                       height: 82.h,
                       width: double.infinity,
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               RichText(
                                 text: TextSpan(
@@ -72,15 +73,15 @@ class HomeScreen extends StatelessWidget {
                                     TextSpan(
                                       text: "Commision Type : ",
                                       style: TextStyle(
-                                          color: AppColor.GreyTExtColor,
-                                          fontFamily: typo.WorkSansMedium,
+                                          color: AppColors.GreyTExtColor,
+                                          fontFamily: Typo.medium,
                                           fontSize: 14.sp),
                                     ),
                                     TextSpan(
                                       text: "Company",
                                       style: TextStyle(
                                           color: Colors.black,
-                                          fontFamily: typo.WorkSansMedium,
+                                          fontFamily: Typo.medium,
                                           fontSize: 14.sp),
                                     ),
                                   ],
@@ -95,22 +96,22 @@ class HomeScreen extends StatelessWidget {
                                     TextSpan(
                                       text: "My Commision : ",
                                       style: TextStyle(
-                                          color: AppColor.GreyTExtColor,
-                                          fontFamily: typo.WorkSansMedium,
+                                          color: AppColors.GreyTExtColor,
+                                          fontFamily: Typo.medium,
                                           fontSize: 14.sp),
                                     ),
                                     TextSpan(
                                       text: " \$20 ",
                                       style: TextStyle(
                                           color: Colors.black,
-                                          fontFamily: typo.WorkSansMedium,
+                                          fontFamily: Typo.medium,
                                           fontSize: 14.sp),
                                     ),
                                     TextSpan(
                                       text: "(Fixed)",
                                       style: TextStyle(
-                                          color: AppColor.GreyTExtColor,
-                                          fontFamily: typo.WorkSansMedium,
+                                          color: AppColors.GreyTExtColor,
+                                          fontFamily: Typo.medium,
                                           fontSize: 14.sp),
                                     ),
                                   ],
@@ -118,11 +119,8 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(
-                            width: 50.w,
-                          ),
                           Image.asset(
-                            Asseturl.ighomescreen1,
+                            AssetUrl.ighomescreen1,
                             height: 42.h,
                             width: 42.w,
                           ),
@@ -132,6 +130,7 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(
                       height: 40.h,
                     ),
+
                     GridView(
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
@@ -145,19 +144,19 @@ class HomeScreen extends StatelessWidget {
                         DashboarGrid(
                             value: "98",
                             text: "Total Booking",
-                            icon: Asseturl.igticketicon),
+                            icon: AssetUrl.igticketicon),
                         DashboarGrid(
                             value: "15",
                             text: "Total Service",
-                            icon: Asseturl.igdocumentionicon),
+                            icon: AssetUrl.igdocumentionicon),
                         DashboarGrid(
                             value: "30",
                             text: "Handyman",
-                            icon: Asseturl.igdocumentionicon),
+                            icon: AssetUrl.igdocumentionicon),
                         DashboarGrid(
                             value: "\$45.3",
                             text: "Total Earning",
-                            icon: Asseturl.igticketicon),
+                            icon: AssetUrl.igticketicon),
                       ],
                     ),
                     SizedBox(
@@ -167,13 +166,13 @@ class HomeScreen extends StatelessWidget {
                       "Monthly Revenue USD",
                       style: TextStyle(
                           color: Color(0xff1C1F34),
-                          fontFamily: typo.WorkSansMedium,
+                          fontFamily: Typo.medium,
                           fontSize: 18.sp),
                     ),
                     SizedBox(
                       height: 16.h,
                     ),
-                    Image.asset(Asseturl.igchartpng),
+                    Image.asset(AssetUrl.igchartpng),
                     SizedBox(
                       height: 65.h,
                     ),
@@ -192,7 +191,7 @@ class HomeScreen extends StatelessWidget {
                           "Handyman",
                           style: TextStyle(
                               color: Colors.black,
-                              fontFamily: typo.WorkSansMedium,
+                              fontFamily: Typo.medium,
                               fontSize: 18.sp),
                         ),
                         TextButton(
@@ -200,12 +199,15 @@ class HomeScreen extends StatelessWidget {
                           child: Text(
                             "View All",
                             style: TextStyle(
-                                color: AppColor.mainColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.primaryColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                         )
                       ],
+                    ),
+                    SizedBox(
+                      height: 20.h,
                     ),
                     GridView(
                       physics: NeverScrollableScrollPhysics(),
@@ -238,7 +240,7 @@ class HomeScreen extends StatelessWidget {
                           "Services",
                           style: TextStyle(
                               color: Colors.black,
-                              fontFamily: typo.WorkSansMedium,
+                              fontFamily: Typo.medium,
                               fontSize: 18.sp),
                         ),
                         TextButton(
@@ -248,8 +250,8 @@ class HomeScreen extends StatelessWidget {
                           child: Text(
                             "View All",
                             style: TextStyle(
-                                color: AppColor.mainColor,
-                                fontFamily: typo.WorkSansMedium,
+                                color: AppColors.primaryColor,
+                                fontFamily: Typo.medium,
                                 fontSize: 14.sp),
                           ),
                         )

@@ -1,4 +1,4 @@
-class Asseturl {
+class AssetUrl {
   static String igProviderlogo1 = "assets/images/provider1Logo.png";
   static String igmassageicon = "assets/images/iconMessage.png";
   static String ighide = "assets/images/iconHide.png";
@@ -30,4 +30,11 @@ class Asseturl {
   static String icdeleteicon = "assets/imagesDeleteicon.png";
   static String igpaymentimg1 = "assets/images/paymentimg1.png";
   static String igsevicedetailsimg1 = "assets/images/servicedetailsimg1.png";
+
+  // BOTTOM APP BAR ICONS
+
+  static String icHome = "assets/icons/Home.svg";
+  static String icBookings = "assets/icons/Ticket.svg";
+  static String icWallet = "assets/icons/Wallet.svg";
+  static String icNotification = "assets/icons/Notification.svg";
 }
